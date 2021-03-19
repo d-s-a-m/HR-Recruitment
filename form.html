@@ -1,127 +1,99 @@
-<head>
-    <title>Registration Form</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-      /* Remove the navbar's default margin-bottom and rounded borders */ 
-      .navbar {
-        margin-bottom: 0;
-        border-radius: 0;
-      }
-      
-    #example{
-        background-image: url(bgform.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-      /* On small screens, set height to 'auto' for sidenav and grid */
-      @media screen and (max-width: 767px) {
-        .sidenav {
-          height: auto;
-          padding: 15px;
-        }
-        .row.content {height:auto;} 
-      }
-      body{background-color:#ffffff}
-
-      p{font-size:20; color:white}
-
-      #alertBox {
-    position:relative;
-    width:300px;
-    min-height:100px;
-    margin-top:50px;
-    border:1px solid #666;
-    background-color:#fff;
-    background-repeat:no-repeat;
-    background-position:20px 30px;
-}
-    </style>
-  </head>
-
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <img src="C:\Users\Training\Desktop\logo.jpg" width=50px height=50px>
-      </div>
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+.container {  
+    padding: 50px;  
+  background-color: lightblue;  
+}  
   
-   
-     
-         
-        </ul>
-      </div>
-    
-    </div>
-  </nav>
-
-
-  <CENTER>
-      <BR><BR>
-        <div id="example">
-<form action="" id="EmploymentApplication100" method="post" onsubmit="return ValidateForm(this);">
-    
-
-    <table border="0" cellpadding="5" cellspacing="0">
-    <tr> <td style="width: 50%">
-    <label for="First_Name"><b>First name *</b></label><br />
-    <input name="First_Name" type="text" maxlength="50" style="width:100%;max-width: 260px" />
-    </td> </tr> <tr> <td colspan="2"><br>
-    <label for="Last_Name"><b>Last name *</b></label><br />
-    <input name="Last_Name" type="text" maxlength="50" style="width:100%;max-width: 260px" />
-    </td> </tr> <tr> <td colspan="2">
-        <BR>
-    <label for="Email_Address"><b>Email *</b></label><br />
-    <input name="Email_Address" type="text" maxlength="100" style="width:100%;max-width: 535px" />
-    </td> </tr> <tr> <td colspan="2">
-       <BR> 
-        <label for="filename"><b>Upload Resume:*</b></label><br />
-        <input type="file" id="myFile" name="filename">
-      <BR>
-    </td> </tr> <tr> <td colspan="2">
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: orange;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+</style>  
+</head>  
+<body>  
+<form>  
+  <div class="container">  
+  <center>  <h1> Job Application Form</h1> </center>  
+  <hr>  
+  <label> Firstname </label>   
+<input type="text" name="firstname" placeholder= "Firstname" size="15" required />   
+<label> Middlename: </label>   
+<input type="text" name="middlename" placeholder="Middlename" size="15" required />   
+<label> Lastname: </label>    
+<input type="text" name="lastname" placeholder="Lastname" size="15"required />   
+<div>  
+<label>   
+Educational Qualification :  
+</label>   
   
-    </td> </tr> <tr> <td>
-    <label for="Salary"><b>Work Experience</b></label><br /> <input name="Salary" type="text" maxlength="50" style="width:100%;max-width: 260px" /> </td> <td>
-    </td> </tr> <tr> <td colspan="2"><br>
-    <label for="StartDate"><b>When can you start?</b></label><br />
-    <input name="StartDate" type="date" maxlength="50" style="width:100%;max-width: 260px" />
-    </td> </tr> <tr> <td>
-        <BR>
-    <label for="Phone"><b>Phone *</b></label><br />
-    <input name="Phone" type="text" maxlength="50" style="width:100%;max-width: 260px" />
-    </td> <td>
-   
-    </td> </tr> <tr> <td colspan="2">
-        <BR>
-    <label for="Relocate"><b>Are you willing to relocate?</b></label><br />
-    <input name="Relocate" type="radio" value="Yes" checked="checked" /> Yes      
-    <input name="Relocate" type="radio" value="No" /> No      
-    <input name="Relocate" type="radio" value="NotSure" /> Not sure
-    </td> </tr> <tr> <td colspan="2">
-        <BR>
-    <label for="Organization"><b>Last company you worked for</b></label><br />
-    <input name="Organization" type="text" maxlength="100" style="width:100%;max-width: 535px" />
-    </td> </tr> <tr> <td colspan="2">
-        <BR>
-    <label for="Reference"><b>Reference / Comments / Questions</b></label><br />
-    <textarea name="Reference" rows="7" cols="40" style="width:100%;max-width: 535px"></textarea>
-    </td> </tr> <tr> <td colspan="2" style="text-align: center;">
-   
-        
-
-    <input name="skip_submit" type="submit" value="Send Application" onclick="alert('FORM SUBMITTED SUCCESSFULLY!!')"/>
-   
+<select>  
+<option value="Course">Qualification</option>  
+<option value="BCA">BCA</option>  
+<option value="BBA">BBA</option>  
+<option value="B.Tech">B.Tech</option>  
+<option value="MBA">MBA</option>  
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option>  
+</select>  
+</div>  
+<div>  
+<label>   
+Gender :  
+</label><br>  
+<input type="radio" value="Male" name="gender" checked > Male   
+<input type="radio" value="Female" name="gender"> Female   
+<input type="radio" value="Other" name="gender"> Other  
+  
+</div>  
+<label>   
+Phone :  
+</label>  
+<input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/>   
  
-    </td> </tr>
-    </table>
-    </form>
-</div>
-    </CENTER>
+Current Address :  
+<textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+</textarea>  
+ <label for="email"><b>Email</b></label>  
+ <input type="text" placeholder="Enter Email" name="email" required>  
+  
+    <center> 
+ <input name="skip_submit" type="submit" value="Send Application" onclick="alert('FORM SUBMITTED SUCCESSFULLY!!')"/> </center>
+</form>  
+</body>  
+</html>  
