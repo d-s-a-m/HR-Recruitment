@@ -1,0 +1,127 @@
+<head>
+    <title>Registration Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      /* Remove the navbar's default margin-bottom and rounded borders */ 
+      .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+      
+    #example{
+        background-image: url(bgform.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          height: auto;
+          padding: 15px;
+        }
+        .row.content {height:auto;} 
+      }
+      body{background-color:#ffffff}
+
+      p{font-size:20; color:white}
+
+      #alertBox {
+    position:relative;
+    width:300px;
+    min-height:100px;
+    margin-top:50px;
+    border:1px solid #666;
+    background-color:#fff;
+    background-repeat:no-repeat;
+    background-position:20px 30px;
+}
+    </style>
+  </head>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <img src="C:\Users\Training\Desktop\logo.jpg" width=50px height=50px>
+      </div>
+  
+   
+     
+         
+        </ul>
+      </div>
+    
+    </div>
+  </nav>
+
+
+  <CENTER>
+      <BR><BR>
+        <div id="example">
+<form action="" id="EmploymentApplication100" method="post" onsubmit="return ValidateForm(this);">
+    
+
+    <table border="0" cellpadding="5" cellspacing="0">
+    <tr> <td style="width: 50%">
+    <label for="First_Name"><b>First name *</b></label><br />
+    <input name="First_Name" type="text" maxlength="50" style="width:100%;max-width: 260px" />
+    </td> </tr> <tr> <td colspan="2"><br>
+    <label for="Last_Name"><b>Last name *</b></label><br />
+    <input name="Last_Name" type="text" maxlength="50" style="width:100%;max-width: 260px" />
+    </td> </tr> <tr> <td colspan="2">
+        <BR>
+    <label for="Email_Address"><b>Email *</b></label><br />
+    <input name="Email_Address" type="text" maxlength="100" style="width:100%;max-width: 535px" />
+    </td> </tr> <tr> <td colspan="2">
+       <BR> 
+        <label for="filename"><b>Upload Resume:*</b></label><br />
+        <input type="file" id="myFile" name="filename">
+      <BR>
+    </td> </tr> <tr> <td colspan="2">
+  
+    </td> </tr> <tr> <td>
+    <label for="Salary"><b>Work Experience</b></label><br /> <input name="Salary" type="text" maxlength="50" style="width:100%;max-width: 260px" /> </td> <td>
+    </td> </tr> <tr> <td colspan="2"><br>
+    <label for="StartDate"><b>When can you start?</b></label><br />
+    <input name="StartDate" type="date" maxlength="50" style="width:100%;max-width: 260px" />
+    </td> </tr> <tr> <td>
+        <BR>
+    <label for="Phone"><b>Phone *</b></label><br />
+    <input name="Phone" type="text" maxlength="50" style="width:100%;max-width: 260px" />
+    </td> <td>
+   
+    </td> </tr> <tr> <td colspan="2">
+        <BR>
+    <label for="Relocate"><b>Are you willing to relocate?</b></label><br />
+    <input name="Relocate" type="radio" value="Yes" checked="checked" /> Yes      
+    <input name="Relocate" type="radio" value="No" /> No      
+    <input name="Relocate" type="radio" value="NotSure" /> Not sure
+    </td> </tr> <tr> <td colspan="2">
+        <BR>
+    <label for="Organization"><b>Last company you worked for</b></label><br />
+    <input name="Organization" type="text" maxlength="100" style="width:100%;max-width: 535px" />
+    </td> </tr> <tr> <td colspan="2">
+        <BR>
+    <label for="Reference"><b>Reference / Comments / Questions</b></label><br />
+    <textarea name="Reference" rows="7" cols="40" style="width:100%;max-width: 535px"></textarea>
+    </td> </tr> <tr> <td colspan="2" style="text-align: center;">
+   
+        
+
+    <input name="skip_submit" type="submit" value="Send Application" onclick="alert('FORM SUBMITTED SUCCESSFULLY!!')"/>
+   
+ 
+    </td> </tr>
+    </table>
+    </form>
+</div>
+    </CENTER>
